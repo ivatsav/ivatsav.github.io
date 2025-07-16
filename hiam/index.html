@@ -25,30 +25,22 @@
 
     .nav {
       text-align: center;
-      margin-top: 2em;
+      margin-top: 1.5em;
       font-size: 16px;
     }
 
-    .nav a {
+    .nav p {
+      margin: 0.4em 0;
+    }
+
+    a {
       color: #0066cc;
       text-decoration: none;
-      margin: 0 0.5em;
     }
 
-    .nav a:hover {
+    a:hover {
       text-decoration: underline;
-    }
-
-    .copy {
-      display: inline-block;
-      cursor: pointer;
-      color: #666;
-      font-size: 14px;
-      margin-top: 0.5em;
-    }
-
-    .copy:hover {
-      color: #000;
+      color: #0044cc;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -57,20 +49,12 @@
         color: #eee;
       }
 
-      .nav a {
+      a {
         color: #80bfff;
       }
 
-      .nav a:hover {
+      a:hover {
         color: #aaccff;
-      }
-
-      .copy {
-        color: #aaa;
-      }
-
-      .copy:hover {
-        color: #fff;
       }
     }
   </style>
@@ -93,19 +77,11 @@ is the reason why you're suffering
 </p>
 
 <div class="nav">
-  <div>
-    <span class="copy" onclick="copyLink()">copy link</span>
-  </div>
-  <div style="margin-top: 0.5em;">
-    <a href="../#hiam">home</a>
-  </div>
+  <p>share: <a href="https://vatsav.org/hiam">vatsav.org/hiam</a></p>
+  <p><a href="../#hiam">home</a></p>
 </div>
 
 <script>
-  function copyLink() {
-    navigator.clipboard.writeText('https://vatsav.org/hiam');
-  }
-
   window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('loaded');
   });
