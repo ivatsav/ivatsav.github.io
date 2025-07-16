@@ -25,36 +25,30 @@
 
     .nav {
       text-align: center;
-      margin-top: 1.5em;
+      margin-top: 2em;
       font-size: 16px;
     }
 
-    .nav p {
-      margin: 0.3em 0;
-    }
-
-    a {
+    .nav a {
       color: #0066cc;
       text-decoration: none;
       margin: 0 0.5em;
     }
 
-    a:hover {
+    .nav a:hover {
       text-decoration: underline;
-      color: #0044cc;
     }
 
-    button {
-      font-size: 14px;
-      background: none;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      padding: 2px 6px;
+    .copy {
+      display: inline-block;
       cursor: pointer;
+      color: #666;
+      font-size: 14px;
+      margin-top: 0.5em;
     }
 
-    button:hover {
-      background: #eee;
+    .copy:hover {
+      color: #000;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -63,22 +57,20 @@
         color: #eee;
       }
 
-      a {
+      .nav a {
         color: #80bfff;
       }
 
-      a:hover {
+      .nav a:hover {
         color: #aaccff;
       }
 
-      button {
-        border-color: #666;
-        color: #eee;
-        background: #222;
+      .copy {
+        color: #aaa;
       }
 
-      button:hover {
-        background: #333;
+      .copy:hover {
+        color: #fff;
       }
     }
   </style>
@@ -101,21 +93,17 @@ is the reason why you're suffering
 </p>
 
 <div class="nav">
-  <p>
-    copy & share: <span id="copy-link">https://vatsav.org/hiam</span>
-    <button onclick="copyToClipboard()">copy</button>
-  </p>
-  <p><a href="../#hiam">home</a></p>
+  <div>
+    <span class="copy" onclick="copyLink()">copy link</span>
+  </div>
+  <div style="margin-top: 0.5em;">
+    <a href="../#hiam">home</a>
+  </div>
 </div>
 
 <script>
-  function copyToClipboard() {
-    const text = document.getElementById('copy-link').textContent;
-    navigator.clipboard.writeText(text).then(() => {
-      alert('Link copied to clipboard!');
-    }).catch(() => {
-      alert('Failed to copy');
-    });
+  function copyLink() {
+    navigator.clipboard.writeText('https://vatsav.org/hiam');
   }
 
   window.addEventListener('DOMContentLoaded', () => {
