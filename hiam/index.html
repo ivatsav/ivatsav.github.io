@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>happiness is a myth</title>
   <style>
     body {
-      font-family: Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 18px;
       line-height: 1.6;
       background: white;
@@ -15,6 +15,23 @@
       margin: 2em auto;
       padding: 0 1rem;
       white-space: pre-wrap;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      margin: 0 0.5em;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0044cc;
     }
 
     .nav {
@@ -25,15 +42,6 @@
 
     .nav p {
       margin: 0.3em 0;
-    }
-
-    a {
-      color: #0044cc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -53,26 +61,41 @@
   </style>
 </head>
 <body>
-
 <p>
-happiness is a myth  
-it does not exist  
-what you are seeking  
-is an absence of  
-an escape from...suffering  
-it is not the same thing  
-until you see the truth  
-(for truth is seen not heard)  
-you will keep searching for happiness  
-and continue to find suffering  
-for the pursuit of happiness  
+happiness is a myth
+
+it does not exist
+
+what you are seeking
+
+is an absence of
+
+an escape from...suffering
+
+it is not the same thing
+
+until you see the truth
+
+(for truth is seen not heard)
+
+you will keep searching for happiness
+
+and continue to find suffering
+
+for the pursuit of happiness
+
 is the reason why you're suffering
 </p>
 
 <div class="nav">
   <p>copy & share: <a href="https://vatsav.org/hiam/">vatsav.org/hiam</a></p>
-  <p><a href="../">home</a></p>
+  <p><a href="../#e">home</a></p>
 </div>
 
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
 </body>
 </html>
