@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>home</title>
+  <title>my writings</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: helvetica, sans-serif;
+      font-family: Helvetica, sans-serif;
       font-size: 18px;
       line-height: 1.6;
       background: white;
@@ -17,11 +21,12 @@
     }
 
     ul {
+      list-style-type: disc;
       padding-left: 1.2em;
     }
 
     li {
-      margin: 0.5em 0;
+      margin: 0.6em 0;
     }
 
     a {
@@ -51,11 +56,12 @@
 </head>
 <body>
   <ul>
-    <li><a href="article-one/">article one</a></li>
-    <li><a href="article-two/">article two</a></li>
-    <li><a href="hiam/">happiness is a myth</a></li>
-    <li><a href="st/">seeing truth</a></li>
-    <li><a href="e/">education</a></li>
+    <li><a href="article-one/#article-one" id="article-one">article one</a></li>
+    <li><a href="article-two/#article-two" id="article-two">article two</a></li>
+    <li><a href="article-three/#article-three" id="article-three">article three</a></li>
+    <li><a href="st/#st" id="st">seeing truth</a></li>
+    <li><a href="hiam/#hiam" id="hiam">happiness is a myth</a></li>
+    <li><a href="e/#e" id="e">education</a></li>
   </ul>
 </body>
 </html>
