@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>prisoners of mind</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      background: white;
+      color: black;
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 0 1rem;
+      white-space: pre-wrap;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      margin: 0 0.5em;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0044cc;
+    }
+
+    .nav {
+      text-align: center;
+      margin-top: 1.5em;
+      font-size: 16px;
+    }
+
+    .nav p {
+      margin: 0.3em 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111;
+        color: #eee;
+      }
+
+      a {
+        color: #80bfff;
+      }
+
+      a:hover {
+        color: #aaccff;
+      }
+    }
+  </style>
+</head>
+<body>
+<p>
+when you are at work
+you want to be at home
+when you are at home
+you want to be at work
+when you are with friends
+you want to be alone
+when you are alone
+you want to be with friends
+when you are single
+you want to be in a relationship
+when you are in a relationship
+you want to be single
+when you are a kid
+you want to be an adult
+when you are an adult
+you want to be a kid
+when you have nothing
+you want everything
+when you have everything
+you want nothing
+
+this is your life
+experienced
+from
+the prison of mind
+</p>
+
+<div class="nav">
+  <p><a href="../#pom">home</a></p>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+</body>
+</html>
