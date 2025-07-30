@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>no difference</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      background: white;
+      color: black;
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 0 1rem;
+      white-space: pre-wrap;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      margin: 0 0.5em;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0044cc;
+    }
+
+    .nav {
+      text-align: center;
+      margin-top: 1.5em;
+      font-size: 16px;
+    }
+
+    .nav p {
+      margin: 0.3em 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111;
+        color: #eee;
+      }
+
+      a {
+        color: #80bfff;
+      }
+
+      a:hover {
+        color: #aaccff;
+      }
+    }
+  </style>
+</head>
+<body>
+<p>
+the monk is attached
+to his monkhood
+the salary man is attached
+to his salary
+attachment is attachment
+it makes no difference
+whether you sit on a mountain top
+or on a office chair
+it makes no difference
+whether you wear a robe
+or formal clothing
+it makes no difference
+whether you walk bare feet
+or with polished shoes
+it makes no difference
+whether you shave your head
+or comb your hair
+</p>
+
+<div class="nav">
+  <p><a href="../#nd">home</a></p>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+</body>
+</html>
