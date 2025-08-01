@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>a human's life</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      background: white;
+      color: black;
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 0 1rem;
+      white-space: break-spaces;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    a {
+      color: #0645AD; /* Standard web blue */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .nav {
+      text-align: center;
+      margin-top: 1.5em;
+      font-size: 16px;
+    }
+
+    .nav p {
+      margin: 0.3em 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111;
+        color: #eee;
+      }
+
+      a {
+        color: #4ea1ff;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  </style>
+</head>
+<body>
+<p>
+having this
+but wanting that
+having that
+but wanting this
+
+the human spends
+his entire life
+perpetually 
+in search 
+of things 
+he doesn’t have
+and never 
+truly experiences
+what he already has
+
+this is 
+a human’s life
+when lived 
+through the lens 
+of mind
+</p>
+
+<div class="nav">
+  <p><a href="../#ahl">home</a></p>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+</body>
+</html>
