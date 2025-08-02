@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>back to scrolling</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      background: white;
+      color: black;
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 0 1rem;
+      white-space: pre-wrap;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      margin: 0 0.5em;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0044cc;
+    }
+
+    .nav {
+      text-align: center;
+      margin-top: 1.5em;
+      font-size: 16px;
+    }
+
+    .nav p {
+      margin: 0.3em 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111;
+        color: #eee;
+      }
+
+      a {
+        color: #80bfff;
+      }
+
+      a:hover {
+        color: #aaccff;
+      }
+    }
+  </style>
+</head>
+<body>
+<p>
+all humans live
+as if they have
+a million years
+left on this planet
+only when one sees
+the death of someone
+or when they go through
+a near death experience
+do they realise
+how little time
+they’ve got left
+and how much
+they’ve wasted
+scrolling down a screen
+but even this realisation
+lasts a few hours
+or a few days
+soon, the ways of the world
+engulf the human
+and he returns
+back to scrolling
+</p>
+
+<div class="nav">
+  <p><a href="../#bts">home</a></p>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+</body>
+</html>
