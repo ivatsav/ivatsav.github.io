@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>meditation</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      background: white;
+      color: black;
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 0 1rem;
+      white-space: pre-wrap;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      margin: 0 0.5em;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0044cc;
+    }
+
+    .nav {
+      text-align: center;
+      margin-top: 1.5em;
+      font-size: 16px;
+    }
+
+    .nav p {
+      margin: 0.3em 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111;
+        color: #eee;
+      }
+
+      a {
+        color: #80bfff;
+      }
+
+      a:hover {
+        color: #aaccff;
+      }
+    }
+  </style>
+</head>
+<body>
+<p>
+Q: is meditation useful?
+A: it’s useful but it doesn’t work
+
+Q: wait, what? 
+A: meditation is useful to calm your self
+meditation doesn’t work because there is always a meditator
+
+Q: i’m confused
+A: if you have cancer will you try to fix it or cure it?
+
+Q: cure it, of course!
+A: your self is a cancer, created by your mind
+everyone is trying to fix the self by meditation 
+
+Q: so how do i cure it?
+A: by killing the self 
+
+Q: killing it? i don’t get it.  how?
+A: when you truly see the burden of living with the self, the answer will find you
+</p>
+
+<div class="nav">
+  <p><a href="../#med">home</a></p>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+</body>
+</html>
