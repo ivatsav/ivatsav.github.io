@@ -28,19 +28,28 @@
       text-decoration: underline;
     }
 
-    .toggle-link {
+    /* Hide the checkbox input */
+    #toggle-links {
+      display: none;
+    }
+
+    /* Style the label as the toggle button */
+    label.toggle-link {
       margin-top: 2rem;
       color: #0044cc;
       cursor: pointer;
       font-style: italic;
-      text-decoration: none; /* no underline by default */
+      text-decoration: none;
+      user-select: none;
+      display: inline-block;
     }
 
-    .toggle-link:hover {
+    label.toggle-link:hover {
       color: #002a80;
-      text-decoration: underline; /* underline on hover */
+      text-decoration: underline;
     }
 
+    /* The hidden links container */
     .hidden-links {
       opacity: 0;
       max-height: 0;
@@ -51,9 +60,19 @@
       transition: all 0.4s ease;
     }
 
-    .hidden-links.show {
+    /* When checkbox is checked, show the links */
+    #toggle-links:checked ~ ul.hidden-links {
       opacity: 1;
       max-height: 3000px; /* big enough to fit all links */
+    }
+
+    /* Change label text depending on toggle state */
+    #toggle-links:not(:checked) + label.toggle-link::after {
+      content: "don't click";
+    }
+
+    #toggle-links:checked + label.toggle-link::after {
+      content: "go back";
     }
 
     .hidden-links li {
@@ -74,24 +93,28 @@
         color: #aaccff;
       }
 
-      .toggle-link {
+      label.toggle-link {
         color: #80bfff;
-        text-decoration: none; /* no underline by default */
+        text-decoration: none;
       }
 
-      .toggle-link:hover {
+      label.toggle-link:hover {
         color: #aaccff;
-        text-decoration: underline; /* underline on hover */
+        text-decoration: underline;
       }
     }
   </style>
 </head>
 <body>
   <a href="re/">readme to not readme</a>
-  
-  <div id="more" class="toggle-link">don't click</div>
 
-  <ul class="hidden-links" id="links">
+  <!-- Hidden checkbox to control toggle -->
+  <input type="checkbox" id="toggle-links" />
+
+  <!-- Label acts as toggle button -->
+  <label for="toggle-links" class="toggle-link"></label>
+
+  <ul class="hidden-links">
     <li><a href="am/">about me</a></li>
     <li><a href="aw/">about website</a></li>
     <li><a href="ahl/">a human's life</a></li>
@@ -142,25 +165,5 @@
     <li><a href="wb/">writer's block</a></li>
     <li><a href="y/">you</a></li>
   </ul>
-
-  <div id="less" class="toggle-link" style="display:none;">be safe</div>
-
-  <script>
-    const moreBtn = document.getElementById('more');
-    const lessBtn = document.getElementById('less');
-    const links = document.getElementById('links');
-
-    moreBtn.addEventListener('click', () => {
-      links.classList.add('show');
-      moreBtn.style.display = 'none';
-      lessBtn.style.display = 'block';
-    });
-
-    lessBtn.addEventListener('click', () => {
-      links.classList.remove('show');
-      lessBtn.style.display = 'none';
-      moreBtn.style.display = 'block';
-    });
-  </script>
 </body>
 </html>
