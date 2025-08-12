@@ -16,6 +16,7 @@
       align-items: center;
       min-height: 100vh;
       margin: 0;
+      text-align: center;
     }
 
     a {
@@ -27,7 +28,7 @@
       text-decoration: underline;
     }
 
-    .more {
+    .toggle-link {
       margin-top: 2rem;
       color: #666;
       cursor: pointer;
@@ -35,11 +36,18 @@
     }
 
     .hidden-links {
-      display: none;
-      margin-top: 2rem;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
       list-style-type: none;
       padding: 0;
-      text-align: center;
+      margin-top: 2rem;
+      transition: all 0.4s ease;
+    }
+
+    .hidden-links.show {
+      opacity: 1;
+      max-height: 1000px; /* big enough to fit list */
     }
 
     .hidden-links li {
@@ -60,69 +68,87 @@
         color: #aaccff;
       }
 
-      .more {
+      .toggle-link {
         color: #aaa;
       }
     }
   </style>
 </head>
 <body>
-  <div>
-    <div><a href="re/">readme to not readme</a></div>
-    <div class="more" onclick="document.querySelector('.hidden-links').style.display='block'; this.style.display='none';">
-      more…
-    </div>
-    <ul class="hidden-links">
-      <li><a href="am/">about me</a></li>
-      <li><a href="aw/">about website</a></li>
-      <li><a href="ahl/">a human's life</a></li>
-      <li><a href="a/">a-theist</a></li>
-      <li><a href="ad/">advice</a></li>
-      <li><a href="ammd/">all meditators must die</a></li>
-      <li><a href="apdtk/">all parents destroy their kids</a></li>
-      <li><a href="an/">anger</a></li>
-      <li><a href="aot/">arrive or travel</a></li>
-      <li><a href="at/">attachment</a></li>
-      <li><a href="bts/">back to scrolling</a></li>
-      <li><a href="b/">belief</a></li>
-      <li><a href="ch/">chase</a></li>
-      <li><a href="co/">compromise</a></li>
-      <li><a href="c/">create</a></li>
-      <li><a href="dod/">date of death</a></li>
-      <li><a href="d/">devotion</a></li>
-      <li><a href="e/">education</a></li>
-      <li><a href="ekcsa/">even krishna couldn't save arjuna</a></li>
-      <li><a href="gad/">guru and disciple</a></li>
-      <li><a href="hw/">hard work</a></li>
-      <li><a href="hiam/">happiness is a myth</a></li>
-      <li><a href="io/">instead of</a></li>
-      <li><a href="iotam/">it only takes a moment</a></li>
-      <li><a href="iyn/">if you need</a></li>
-      <li><a href="mov/">masks of virtue</a></li>
-      <li><a href="med/">meditation</a></li>
-      <li><a href="nom/">needs of man</a></li>
-      <li><a href="nd/">no difference</a></li>
-      <li><a href="nm/">no mind</a></li>
-      <li><a href="nk/">not knowing</a></li>
-      <li><a href="p/">problems</a></li>
-      <li><a href="pom/">prison of mind</a></li>
-      <li><a href="st/">seeing truth</a></li>
-      <li><a href="sh/">self help</a></li>
-      <li><a href="swab/">siddhartha wasn't a buddhist</a></li>
-      <li><a href="so/">socialisation</a></li>
-      <li><a href="sub/">subscriptions</a></li>
-      <li><a href="r/">religion</a></li>
-      <li><a href="th/">there</a></li>
-      <li><a href="t/">truth</a></li>
-      <li><a href="thwp/">the human who pursues</a></li>
-      <li><a href="tmch/">the most complete human</a></li>
-      <li><a href="tnom/">the need of masses</a></li>
-      <li><a href="ttg/">the true guru</a></li>
-      <li><a href="ta/">the actor</a></li>
-      <li><a href="wylias/">why your life is a struggle</a></li>
-      <li><a href="wb/">writer's block</a></li>
-      <li><a href="y/">you</a></li>
-    </ul>
-  </div>
+  <a href="re/">readme to not readme</a>
+  
+  <div id="more" class="toggle-link">not safe for you</div>
+
+  <ul class="hidden-links" id="links">
+    <li><a href="am/">about me</a></li>
+    <li><a href="aw/">about website</a></li>
+    <li><a href="ahl/">a human's life</a></li>
+    <li><a href="a/">a-theist</a></li>
+    <li><a href="ad/">advice</a></li>
+    <li><a href="ammd/">all meditators must die</a></li>
+    <li><a href="apdtk/">all parents destroy their kids</a></li>
+    <li><a href="an/">anger</a></li>
+    <li><a href="aot/">arrive or travel</a></li>
+    <li><a href="at/">attachment</a></li>
+    <li><a href="bts/">back to scrolling</a></li>
+    <li><a href="b/">belief</a></li>
+    <li><a href="ch/">chase</a></li>
+    <li><a href="co/">compromise</a></li>
+    <li><a href="c/">create</a></li>
+    <li><a href="dod/">date of death</a></li>
+    <li><a href="d/">devotion</a></li>
+    <li><a href="e/">education</a></li>
+    <li><a href="ekcsa/">even krishna couldn't save arjuna</a></li>
+    <li><a href="gad/">guru and disciple</a></li>
+    <li><a href="hw/">hard work</a></li>
+    <li><a href="hiam/">happiness is a myth</a></li>
+    <li><a href="io/">instead of</a></li>
+    <li><a href="iotam/">it only takes a moment</a></li>
+    <li><a href="iyn/">if you need</a></li>
+    <li><a href="mov/">masks of virtue</a></li>
+    <li><a href="med/">meditation</a></li>
+    <li><a href="nom/">needs of man</a></li>
+    <li><a href="nd/">no difference</a></li>
+    <li><a href="nm/">no mind</a></li>
+    <li><a href="nk/">not knowing</a></li>
+    <li><a href="p/">problems</a></li>
+    <li><a href="pom/">prison of mind</a></li>
+    <li><a href="st/">seeing truth</a></li>
+    <li><a href="sh/">self help</a></li>
+    <li><a href="swab/">siddhartha wasn't a buddhist</a></li>
+    <li><a href="so/">socialisation</a></li>
+    <li><a href="sub/">subscriptions</a></li>
+    <li><a href="r/">religion</a></li>
+    <li><a href="th/">there</a></li>
+    <li><a href="t/">truth</a></li>
+    <li><a href="thwp/">the human who pursues</a></li>
+    <li><a href="tmch/">the most complete human</a></li>
+    <li><a href="tnom/">the need of masses</a></li>
+    <li><a href="ttg/">the true guru</a></li>
+    <li><a href="ta/">the actor</a></li>
+    <li><a href="wylias/">why your life is a struggle</a></li>
+    <li><a href="wb/">writer's block</a></li>
+    <li><a href="y/">you</a></li>
+  </ul>
+
+  <div id="less" class="toggle-link" style="display:none;">safe for you</div>
+
+  <script>
+    const moreBtn = document.getElementById('more');
+    const lessBtn = document.getElementById('less');
+    const links = document.getElementById('links');
+
+    moreBtn.addEventListener('click', () => {
+      links.classList.add('show');
+      moreBtn.style.display = 'none';
+      lessBtn.style.display = 'block';
+    });
+
+    lessBtn.addEventListener('click', () => {
+      links.classList.remove('show');
+      lessBtn.style.display = 'none';
+      moreBtn.style.display = 'block';
+    });
+  </script>
 </body>
 </html>
