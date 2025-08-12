@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>home</title>
   <style>
     body {
@@ -33,11 +33,12 @@
       color: #0044cc;
       cursor: pointer;
       font-style: italic;
-      text-decoration: underline; /* looks like a link even before hover */
+      text-decoration: none; /* no underline by default */
     }
 
     .toggle-link:hover {
       color: #002a80;
+      text-decoration: underline; /* underline on hover */
     }
 
     .hidden-links {
@@ -52,7 +53,7 @@
 
     .hidden-links.show {
       opacity: 1;
-      max-height: 1000px; /* big enough to fit list */
+      max-height: 3000px; /* big enough to fit all links */
     }
 
     .hidden-links li {
@@ -75,10 +76,12 @@
 
       .toggle-link {
         color: #80bfff;
+        text-decoration: none; /* no underline by default */
       }
 
       .toggle-link:hover {
         color: #aaccff;
+        text-decoration: underline; /* underline on hover */
       }
     }
   </style>
