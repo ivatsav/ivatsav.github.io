@@ -35,18 +35,24 @@
 
     /* Style the label as the toggle button */
     label.toggle-link {
-      margin-top: 2rem;
+      margin-top: 0.5rem; /* smaller margin when collapsed */
       color: #0044cc;
       cursor: pointer;
       font-style: italic;
       text-decoration: none;
       user-select: none;
       display: inline-block;
+      transition: margin-top 0.3s ease;
     }
 
     label.toggle-link:hover {
       color: #002a80;
       text-decoration: underline;
+    }
+
+    /* Increase spacing when links are shown */
+    #toggle-links:checked ~ label.toggle-link {
+      margin-top: 2rem;
     }
 
     /* The hidden links container */
