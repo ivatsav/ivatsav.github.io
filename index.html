@@ -30,9 +30,14 @@
 
     .toggle-link {
       margin-top: 2rem;
-      color: #666;
+      color: #0044cc;
       cursor: pointer;
       font-style: italic;
+      text-decoration: underline; /* looks like a link even before hover */
+    }
+
+    .toggle-link:hover {
+      color: #002a80;
     }
 
     .hidden-links {
@@ -69,7 +74,11 @@
       }
 
       .toggle-link {
-        color: #aaa;
+        color: #80bfff;
+      }
+
+      .toggle-link:hover {
+        color: #aaccff;
       }
     }
   </style>
