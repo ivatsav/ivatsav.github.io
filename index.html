@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter or Exit</title>
+  <style>
+    body {
+      font-family: monospace, sans-serif;
+      background-color: #fafafa;
+      color: #222;
+      text-align: center;
+      padding-top: 20vh;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      margin: 0 0.5em;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    a:hover {
+      border-color: currentColor;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #111;
+        color: #eee;
+      }
+      a {
+        color: #80bfff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p>Are you ready to step inside?</p>
+  <p>
+    <a href="/home.html">Enter</a> 
+    | 
+    <a href="#" onclick="window.close(); return false;">Exit</a>
+  </p>
+</body>
+</html>
