@@ -10,14 +10,19 @@
       font-size: 18px;
       background: white;
       color: black;
-      max-width: 600px;
-      margin: 20vh auto;
-      padding: 0 1rem;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;   /* horizontal center */
+      align-items: center;       /* vertical center */
+      min-height: 100vh;         /* full viewport height */
       text-align: center;
     }
 
-    p {
-      white-space: pre-line; /* preserve line breaks */
+    .content {
+      max-width: 600px;
+      padding: 0 1rem;
+      white-space: pre-line; /* preserves your newlines */
     }
 
     a {
@@ -45,7 +50,7 @@
   </style>
 </head>
 <body>
-  <p>
+  <div class="content">
 this is a madman
 in the middle 
 of the street
@@ -94,10 +99,11 @@ just like
 you'd ignore
 the madman
 on the streets
-  </p>
-  <p>
-    <a href="home.html">enter</a>
-    <a href="exit.html">exit</a>
-  </p>
+
+    <p>
+      <a href="home.html">enter</a>
+      <a href="exit.html">exit</a>
+    </p>
+  </div>
 </body>
 </html>
