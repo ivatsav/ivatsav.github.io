@@ -61,17 +61,17 @@
     }
 
     /* When checkbox is checked, show the links */
-    #toggle-links:checked ~ ul.hidden-links {
+    #toggle-links:checked ~ .hidden-links {
       opacity: 1;
       max-height: 3000px; /* big enough to fit all links */
     }
 
     /* Change label text depending on toggle state */
-    #toggle-links:not(:checked) + label.toggle-link::after {
+    #toggle-links:not(:checked) ~ label.toggle-link::after {
       content: "don't click";
     }
 
-    #toggle-links:checked + label.toggle-link::after {
+    #toggle-links:checked ~ label.toggle-link::after {
       content: "go back";
     }
 
@@ -111,9 +111,7 @@
   <!-- Hidden checkbox to control toggle -->
   <input type="checkbox" id="toggle-links" />
 
-  <!-- Label acts as toggle button -->
-  <label for="toggle-links" class="toggle-link"></label>
-
+  <!-- The list of links -->
   <ul class="hidden-links">
     <li><a href="am/">about me</a></li>
     <li><a href="aw/">about website</a></li>
@@ -165,5 +163,8 @@
     <li><a href="wb/">writer's block</a></li>
     <li><a href="y/">you</a></li>
   </ul>
+
+  <!-- Label placed AFTER the list so it appears below -->
+  <label for="toggle-links" class="toggle-link"></label>
 </body>
 </html>
