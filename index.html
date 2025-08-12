@@ -2,43 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enter or Exit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>home</title>
   <style>
     body {
-      font-family: monospace, sans-serif;
-      background-color: #fafafa;
-      color: #222;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      background: white;
+      color: black;
+      max-width: 600px;
+      margin: 20vh auto;
+      padding: 0 1rem;
       text-align: center;
-      padding-top: 20vh;
     }
+
     a {
-      color: #0066cc;
+      color: #0044cc;
       text-decoration: none;
-      margin: 0 0.5em;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
+      margin: 0 1em;
     }
+
     a:hover {
-      border-color: currentColor;
+      text-decoration: underline;
     }
+
     @media (prefers-color-scheme: dark) {
       body {
-        background-color: #111;
+        background: #111;
         color: #eee;
       }
       a {
         color: #80bfff;
       }
+      a:hover {
+        color: #aaccff;
+      }
     }
   </style>
 </head>
 <body>
-  <p>Are you ready to step inside?</p>
+  <p>Are you sure you want to enter?</p>
   <p>
-    <a href="/home.html">Enter</a> 
-    | 
-    <a href="#" onclick="window.close(); return false;">Exit</a>
+    <a href="main.html">Enter</a>
+    <a href="exit.html">Exit</a>
   </p>
 </body>
 </html>
