@@ -35,7 +35,7 @@
 
     /* Style the label as the toggle button */
     label.toggle-link {
-      margin-top: 0.5rem; /* smaller margin when collapsed */
+      margin-top: 0.5rem; /* small margin so it sits close to readme */
       color: #0044cc;
       cursor: pointer;
       font-style: italic;
@@ -50,11 +50,6 @@
       text-decoration: underline;
     }
 
-    /* Increase spacing when links are shown */
-    #toggle-links:checked ~ label.toggle-link {
-      margin-top: 2rem;
-    }
-
     /* The hidden links container */
     .hidden-links {
       opacity: 0;
@@ -62,14 +57,15 @@
       overflow: hidden;
       list-style-type: none;
       padding: 0;
-      margin-top: 2rem;
+      margin-top: 0; /* no margin when hidden */
       transition: all 0.4s ease;
     }
 
-    /* When checkbox is checked, show the links */
+    /* Show links with margin when toggled */
     #toggle-links:checked ~ .hidden-links {
       opacity: 1;
       max-height: 3000px; /* big enough to fit all links */
+      margin-top: 2rem; /* margin appears only when visible */
     }
 
     /* Change label text depending on toggle state */
