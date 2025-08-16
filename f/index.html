@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>fulfilment</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      background: white;
+      color: black;
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 0 1rem;
+      white-space: break-spaces;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    a {
+      color: #0645AD; /* Standard web blue */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .nav {
+      text-align: center;
+      margin-top: 1.5em;
+      font-size: 16px;
+    }
+
+    .nav p {
+      margin: 0.3em 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111;
+        color: #eee;
+      }
+
+      a {
+        color: #4ea1ff;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  </style>
+</head>
+<body>
+<p>
+the day
+one is ready
+to die
+is the day
+one has lived
+
+almost all humans
+fear death
+not because
+death is final
+but because
+they have 
+not yet lived
+fully
+
+there is always
+something
+left to <a href="../ch/">chase</a>
+
+the unsuccessful dream
+of becoming successful
+and spend their lives
+in that chase
+
+the successful
+who have built
+their palaces
+begin another chase
+to keep themselves busy
+
+this is <a href="../ahl/">a human's life</a>
+it does not matter
+if your pockets
+are heavy or empty
+money solves
+money’s problems
+but it cannot imprison 
+<a href="../pom/">the prisoners of mind</a> 
+
+you could
+buy the world
+and the mind
+will whisper
+”not enough
+not until you
+own the stars”
+
+but what if
+you lived
+as if you are
+ready to die
+not tomorrow
+not tonight
+but now
+right now
+
+because
+there is nothing 
+left to chase
+
+before you ask
+“is that possible?”
+the answer is yes
+
+for the rare 
+it only takes
+a moment <a href="../iotam/">a moment</a>
+for some
+only when they know
+their <a href="../dod/">date of death</a>
+for most
+never at all
+
+before you ask
+“how can I…”
+
+look closely
+at a day in your life
+
+what thoughts arise?
+what voices fill your ears?
+what words leave your lips?
+
+if you’re still here
+the answer is…<a href="../th/">there</a>
+</p>
+
+<div class="nav">
+  <p><a href="../#f">home</a></p>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+</body>
+</html>
