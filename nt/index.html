@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>new thing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      background: white;
+      color: black;
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 0 1rem;
+      white-space: break-spaces;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    a {
+      color: #0645AD; /* Standard web blue */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .nav {
+      text-align: center;
+      margin-top: 1.5em;
+      font-size: 16px;
+    }
+
+    .nav p {
+      margin: 0.3em 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111;
+        color: #eee;
+      }
+
+      a {
+        color: #4ea1ff;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  </style>
+</head>
+<body>
+<p>
+i have always been fond of tech
+i always wanted the newest thing
+so i can experience 
+and improve myself
+emphasis on the word improve
+i reasoned
+albeit with my self
+that i need it 
+to improve my life
+but today 
+i saw a truth
+often it is not the product 
+that is exciting
+but rather the kick 
+of owning something new
+but every new thing 
+soon becomes old
+and i reason my self again 
+to get another new thing
+this is an endless cycle 
+that repeats again and again
+this is the cost i’ve paid 
+by <a href="../pom/">living within my mind</a>
+for the human 
+has no <a href="../ahl/">preference</a>
+of one thing over another
+it is all the mind 
+and i am not my mind
+</p>
+
+<div class="nav">
+  <p><a href="../#nt">exit</a></p>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+</body>
+</html>
