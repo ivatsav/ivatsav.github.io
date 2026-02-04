@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>the unserious</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      background: white;
+      color: black;
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 0 1rem;
+      white-space: break-spaces;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    a {
+      color: #0645AD; /* Standard web blue */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .nav {
+      text-align: center;
+      margin-top: 1.5em;
+      font-size: 16px;
+    }
+
+    .nav p {
+      margin: 0.3em 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111;
+        color: #eee;
+      }
+
+      a {
+        color: #4ea1ff;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  </style>
+</head>
+<body>
+<p>
+the buddhist monks
+mediate for many hours
+every day
+they have been doing it
+for centuries
+
+2000+ years have passed
+we haven’t yet had
+another buddha<a href="../swab/">buddha</a>
+not even one
+
+and you think
+by <a href="../pr/">practising</a>
+meditation <a href="../med/">meditation</a>
+for 20 minutes a day
+and attending
+the courses
+of your
+favourite bearded gurus
+will give you
+enlightenment
+bringing an end
+to all your <a href="../p/">problems</a>
+
+there is <a href="../no/">no difference</a>
+between the monk 
+and the householder
+both are reluctant
+to <a href="../st/">see the truth</a>
+they’d rather settle
+for a <a href="../co/">compromise</a>
+
+for the <a href="../pl/">world</a> is built
+for the unserious
+by the unserious
+to pursue
+the unserious
+</p>
+
+<div class="nav">
+  <p><a href="../#tu">exit</a></p>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+</body>
+</html>
